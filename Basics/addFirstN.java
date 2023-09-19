@@ -1,5 +1,5 @@
 /*
-
+Adds first n natural numbers
 Enter number: 4
 10
  
