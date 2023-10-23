@@ -1,7 +1,8 @@
 import java.util.*;
  
 public class heapSort {
- 
+    
+    // This is code for Heap Sort 
     public static void heapSort(int[] arr)
     {
         PriorityQueue<Integer> maxHeap
