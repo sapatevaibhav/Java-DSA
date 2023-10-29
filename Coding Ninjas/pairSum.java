@@ -9,13 +9,13 @@ public class pairSum {
         int arr[] = { 2, -6, 2, 5, 2 };
         int s = 4;
 
-        List<int[]> result = pairSum(arr, s);
+        List<int[]> result = pairsSum(arr, s);
         for (int[] pair : result) {
             System.out.println(pair[0] + " + " + pair[1] + " = " + s);
         }
     }
 
-    public static List<int[]> pairSum(int[] arr, int s) {
+    public static List<int[]> pairsSum(int[] arr, int s) {
         List<int[]> outp = new ArrayList<int[]>();
         Arrays.sort(arr);
         for (int i = 0; i < arr.length; i++) {

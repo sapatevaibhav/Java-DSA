@@ -1,12 +1,9 @@
 import java.util.*;
- 
+
 public class heapSort {
-    
-    // This is code for Heap Sort 
-    public static void heapSort(int[] arr)
-    {
-        PriorityQueue<Integer> maxHeap
-            = new PriorityQueue<>(
+
+    public static void heapSorting(int[] arr) {
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(
                 Collections.reverseOrder());
         for (int i = 0; i < arr.length; i++) {
             maxHeap.offer(arr[i]);
@@ -15,14 +12,13 @@ public class heapSort {
             arr[i] = maxHeap.poll();
         }
     }
- 
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         int[] arr = { 60, 20, 40, 70, 30, 10 };
         System.out.println("Before Sorting: "
-                           + Arrays.toString(arr));
-        heapSort(arr);
+                + Arrays.toString(arr));
+        heapSorting(arr);
         System.out.println("After Sorting: "
-                           + Arrays.toString(arr));
+                + Arrays.toString(arr));
     }
 }

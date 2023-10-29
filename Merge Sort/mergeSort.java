@@ -3,15 +3,15 @@ import java.util.Arrays;
 public class mergeSort {
     public static void main(String args[]) {
         int arr[] = {10, 3, 2, 1, 23, 44, 5433, 434, 3424, 555, 2222424, 44};
-        mergeSort(arr, 0, arr.length - 1);
+        mergeSorting(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
 
-    public static void mergeSort(int[] array, int left, int right) {
+    public static void mergeSorting(int[] array, int left, int right) {
         if (left < right) {
             int mid = (left + right) / 2;
-            mergeSort(array, left, mid);
-            mergeSort(array, mid + 1, right);
+            mergeSorting(array, left, mid);
+            mergeSorting(array, mid + 1, right);
             merge(array, left, mid, right);
         }
     }

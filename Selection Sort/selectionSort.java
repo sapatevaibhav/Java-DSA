@@ -2,10 +2,10 @@ import java.util.Arrays;
 public class selectionSort{
     public static void main(String args[]){
         int arr[] = {10,3,2,1,23,44,5433,434,3424,555,2222424,44};
-        selectionSort(arr);
+        selectionSorting(arr);
     }
 
-public static void selectionSort(int[] array) {
+public static void selectionSorting(int[] array) {
     for (int i = 0; i < array.length; i++) {
         int min = array[i];
         int minId = i;
