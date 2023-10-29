@@ -1,18 +1,15 @@
-public class Solution {
-    public static int countDigits(int n){
-        // Write your code here.
-        int count=0;
-        int num=n;
-        while(num>0)
-        {
-            int rem=num%10;
-            if( rem!=0 && n%rem==0)
-            {
+public class factorsDividesNum {
+    public static void main(String[] args) {
+        System.out.println(countFactors(2));
+    }
+
+    public static int countFactors(int n) {
+        int count = 0;
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
                 count++;
             }
-            num=num/10;
         }
         return count;
     }
 }
-

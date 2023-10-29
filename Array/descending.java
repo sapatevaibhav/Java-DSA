@@ -1,41 +1,34 @@
-class Solution
-{
-    public int removeElement(int[] nums, int val)
-    {
-        int k=0;
-        for(int i=0;i<nums.length;i++)
-        {
-            if(nums[i]!=val)
-            {
+import java.util.Arrays;
+
+public class descending {
+    public static void main(String[] args) {
+
+        int[] nums = { 5, 2, 9, 1, 5, 6 };
+        int val = 5;
+        int newLength = removeElement(nums, val);
+
+        for (int i = 0; i < newLength; i++) {
+            System.out.print(nums[i] + " ");
+        }
+    }
+
+    public static int removeElement(int[] nums, int val) {
+        int k = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val) {
+                nums[k] = nums[i];
                 k++;
             }
-        
         }
-        Arrays.sort(arr, Collections.reverseOrder());
 
-
-/*
-for(int i=nums.length-1;i>=0;i--)
-        {
-            for(int j=nums.length-1;j>=1;j--)
-            {
-                if(nums[j]>nums[j-1])
-                {
-                    int temp=nums[j];
-                    nums[j]=nums[j-1];
-                    nums[j-1]=temp;
-                }
-            }
+        Arrays.sort(nums, 0, k);
+        for (int i = 0; i < k / 2; i++) {
+            int temp = nums[i];
+            nums[i] = nums[k - i - 1];
+            nums[k - i - 1] = temp;
         }
-*/
 
-
-       
         return k;
     }
 }
-
-
-
-
-
