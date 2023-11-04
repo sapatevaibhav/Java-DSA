@@ -1,0 +1,29 @@
+class Solution
+{
+    public String replaceDigits(String s)
+    {
+        char[] sChar=new char[s.length()];
+        sChar=s.toCharArray();
+        for(int i=0;i<sChar.length-1;i=i+2)
+        {
+            int x=Integer.parseInt(String.valueOf(sChar[i+1]));
+            char c3=shift(sChar[i],x);
+            sChar[i+1]=c3;
+        }
+        String s2=new String(sChar);
+        return s2;
+    }
+    public char shift(char c,int x)
+    {
+        for(int i=0;i<x;i++)
+        {
+            c++;
+        }
+        return c;
+    }
+}
+
+
+
+
+
